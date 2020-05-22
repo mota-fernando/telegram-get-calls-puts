@@ -30,8 +30,6 @@ async def my_event_handler(event):
     data = {'time':time,'message':message}
     df = pd.DataFrame(data)
     
-    print(str(df))
-
     time = re.search(r'\d{2}:\d{2}:\d{2}', str(df)).group()
     stock = re.search(r'\w{4}\d{2}', str(df))
     if stock:
